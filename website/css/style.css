@@ -1,0 +1,118 @@
+:root {
+  --navy: #0b1f3a;
+  --blue: #2563eb;
+  --light-blue: #dbeafe;
+  --gray: #f3f4f6;
+  --text: #111827;
+  --muted: #6b7280;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Segoe UI, Calibri, Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--navy), #12325c);
+  color: var(--white);
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 760px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.metric, .card {
+  background: var(--gray);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.metric strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+h1, h2, h3 { color: var(--navy); }
+.hero h1, .hero h2 { color: var(--white); }
+
+.button {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+footer {
+  background: var(--navy);
+  color: var(--white);
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  nav { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  nav a { margin-left: 0; margin-right: .75rem; }
+}
